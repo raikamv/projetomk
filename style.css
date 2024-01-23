@@ -8,8 +8,8 @@
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255, 255, 0.5);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
@@ -34,12 +34,12 @@ body {
 
   /* background: color image repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  height: 100vh;
 }
 
 #container {
@@ -92,6 +92,10 @@ body * {
 .light #switch button {
   right: 0;
   left: initial;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
